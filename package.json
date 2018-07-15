@@ -1,5 +1,6 @@
 {
   "name": "mattbutler.io",
+  "homepage": "http://mattbutler.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
