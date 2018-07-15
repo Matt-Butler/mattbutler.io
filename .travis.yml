@@ -1,9 +1,21 @@
 language: node_js
 node_js:
-  - 8
+- 8
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
+deploy:
+  provider: s3
+  access_key_id: AKIAJ4BPV5GY3GPDTFKA
+  secret_access_key:
+    secure: UgopLzsSPzeh6IJal7ThuPr+h7G+7g+DAN3XCLEgHMVd5Gwo4KFWGJwWgAoph92I2WXsTahoh3hYaxCDEO9rQ3OLtNzlM5gk7QW3+Mixo6sr3vavIhKA6kp8iz/iEd9IrtMMO2+5Isv+eVe31wSkn3Wn+xAtJx9d/5G3cmoYA12jv0/O6riJkLezPIR45CZSPq8wI+00FsjTAvrMxt0zSnYAHLuixrlZE0eFy8IX8nOkhgDsyM+/reqaQ6DI450QWcZ3iQSU2jjGB3RGqx77Om+qltB65z/k5wuWGfmwEGd0mO1VUP1KhSFY9xOHGAydajeXiAS7Q7b+Lxt1wXwDSY8zk/m60xhemrEDgJfCafvXSs2iQYrKzK5nr55VPzfiWDX/D6asUncLmWR63Jq8haEcnSL/v/m9Ft8fCyg4NRjASlg0e90g6HIqg4EhqHoj4zMtBZ+WyuQhrvLxZ0m7R/IAAcfbzEPEhkzs7mv8P5jxjg1ADK4GPyYb3Z1Rw6iZswHYHzHCfPqGaT/ni436lkig/q7bMJowz8ui6wOYTnpQY1rZqSUgYsDxV2RpTAz5qlGVb/4ZM3GYN2MwLQgDTUR23z3wkjdVHd2tdHtT33Kf0poXDgPx3eYQKw+bhYC9KS5vebLwEdn+KBAlM7QUlnRUarvb3p10J8vTLGBCxjI=
+  bucket: mattbutler.io
+  acl: public_read_write
+  local_dir: build
+  skip_cleanup: true
+  on:
+    repo: Matt-Butler/mattbutler.io
+
