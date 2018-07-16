@@ -1,20 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<div
-  className="App"
->
-  <div
-    className="App-header"
-  >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <h2>
-      mattbutler.io
-    </h2>
-  </div>
+exports[`matches snapshot 1`] = `
+<div>
+  <ul>
+    <li>
+      <Link
+        replace={false}
+        to="/home"
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/page1"
+      >
+        Page 1
+      </Link>
+    </li>
+    <li>
+      <Link
+        replace={false}
+        to="/page2"
+      >
+        Page 2
+      </Link>
+    </li>
+  </ul>
+  <Route
+    component={[Function]}
+    path="/home"
+  />
+  <Route
+    component={[Function]}
+    path="/page1"
+  />
+  <Route
+    component={[Function]}
+    path="/page2"
+  />
 </div>
 `;
